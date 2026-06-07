@@ -1,0 +1,184 @@
+/* estilos.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+:root {
+  --primario: #0b5f8a;
+  --acento: #f6b042;
+  --silenciado: #666;
+  --fondo-tarjeta: #d9d9d9; 
+  --boton-rojo: #8b261f;
+  --blanco: #ffffff;
+  --negro: #1a1a1a;
+  --radio: 14px;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Sustituye 'fondo.jpg' por tu imagen de la hamburguesa */
+  background: url('../img/fondotasty.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.contenedor-login {
+  position: relative;
+  z-index: 1;
+  background-color: var(--fondo-tarjeta);
+  width: 95%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Cambiado de flex-start a center para equilibrio visual */
+  margin-bottom: 1.5rem;
+  gap: 10px; /* Espacio mínimo entre logo y texto */
+}
+
+.contenedor-logotipo {
+  flex: 0 10px 120px; /* Controla el ancho máximo del área del logo */
+  display: flex;
+  align-items: center;
+}
+
+.logotipo-imagen {
+  width: 100%;      /* La imagen ocupará el ancho del contenedor */
+  height: 500px;     /* Mantiene la proporción original */
+  max-height: 80px; /* Evita que el logo sea demasiado alto y deforme el encabezado */
+  object-fit: contain; /* Asegura que la imagen no se corte */
+}
+
+
+.area-titulo {
+  text-align: right;
+}
+
+.area-titulo h1 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.area-titulo p {
+  font-size: 0.7rem;
+  color: #555;
+  font-weight: 600;
+}
+
+.etiqueta-tipo-login {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.boton-rol {
+  display: flex;
+  align-items: center;
+  background: var(--blanco);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  transition: transform 0.1s;
+}
+
+.boton-rol.activo {
+  border: 2px solid var(--primario);
+  border-radius: 13px;
+  background-color: #eef7ff;
+}
+
+.boton-rol:active {
+  transform: scale(0.98);
+}
+
+.icono-rol {
+  background: #222;
+  color: white;
+  width: 50px;         /* Ancho fijo para que sea un cuadrado/círculo perfecto */
+  height: 50px;        /* Alto fijo */
+  display: flex;       /* Activamos flexbox */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  border-radius: 10px 0 0 10px;
+  font-size: 1.2rem;   /* Tamaño del icono */
+}
+
+.boton-rol.activo .icono-rol {
+  background: var(--primario);
+}
+
+
+
+.nombre-rol {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.grupo-formulario {
+  margin-top: 1.2rem;
+  text-align: left;
+}
+
+.grupo-formulario label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 0.9rem;
+  background: var(--blanco);
+}
+
+.boton-ingresar {
+  background-color: var(--boton-rojo);
+  color: white;
+  width: 70%;
+  margin: 1.5rem auto 0;
+  display: block;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.boton-ingresar:hover {
+  filter: brightness(1.2);
+}
