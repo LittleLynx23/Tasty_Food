@@ -1,8 +1,8 @@
 <?php
 
-define("BASE_URL", "https://prototipotastyfood.lovestoblog.com/"); 
-define('DB_SERVIDOR', 'sql302.infinityfree.com');
-define('DB_USER', 'if0_42065056');
-define('DB_CLAVE', 'gissell123456'); // 
-define('DB_NOMBRE', 'if0_42065056_tasty_food_db');
+define("BASE_URL", "http://localhost/tastyfood/"); 
+define('DB_SERVIDOR', 'localhost;port=3306');
+define('DB_USER', 'root');
+define('DB_CLAVE', ''); // 
+define('DB_NOMBRE', 'tasty_food_db');
 ?>
